@@ -4,14 +4,17 @@ import React from 'react';
 const BeerItem = ({beer})=> {
     return(
         <div  className="ui card" style={{width:'75vw'}}>
+            <div className="img"><img src={beer.image_url} alt='...' ></img></div>
             <div className="content">
                 <br />
-                <div className="meta">{beer.name}</div>
-                <div className="meta">Description: {beer.description}</div>
+                <h3 className="title">{beer.name}</h3>
+                <b>Description: </b>{beer.description}
                 <br />
-                <div className="meta">Tips: {beer.brewers_tips}</div>
-                <div className="meta">Pair With: {beer.food_pairing}</div>
                 <br />
+                <b>Tips: </b>{beer.brewers_tips}
+                <br />
+                <br />
+                <b>Pair With: </b>{beer.food_pairing}
             </div> 
         </div>
     )
