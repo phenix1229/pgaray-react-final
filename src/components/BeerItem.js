@@ -14,7 +14,14 @@ const BeerItem = ({beer})=> {
                 <b>Tips: </b>{beer.brewers_tips}
                 <br />
                 <br />
-                <b>Pair With: </b>{beer.food_pairing}
+                <b>Pair With: </b>
+                <ul>
+                    {beer.food_pairing.map((item,idx)=>{
+                        return (
+                            <li  key={beer.food_pairing.indexOf(item)}>{item}</li>
+                        )
+                    })}
+                </ul>
             </div> 
         </div>
     )
